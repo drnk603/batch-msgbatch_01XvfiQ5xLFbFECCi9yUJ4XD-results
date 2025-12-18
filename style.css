@@ -356,7 +356,7 @@ ul, ol {
 }
 
 .bg-light { background-color: var(--color-neutral-50); }
-.bg-dark { background-color: var(--color-neutral-dark); }
+
 .bg-primary { background-color: var(--color-primary); }
 .bg-secondary { background-color: var(--color-secondary); }
 .bg-success { background-color: var(--color-success); }
@@ -1150,5 +1150,27 @@ address {
   .c-card {
     border: 1px solid #ccc;
     box-shadow: none;
+  }
+}
+
+/* AUTO-FIX: bg-dark improved contrast */
+.bg-dark > * {
+  color:white!important;
+}
+
+/* AUTO-INJECTED: g-4 layout fix */
+.g-4 > * {
+  width: 100%;
+}
+
+/* --- AUTO-INJECTED: AOS mobile/tablet override --- */
+@media (max-width: 1024px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+  .c-logo__img {
+    display: none!important;
   }
 }
